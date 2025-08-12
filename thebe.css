@@ -1,0 +1,180 @@
+@font-face {
+font-family: "kongtext";
+src: url(FONT/kongtext.ttf) format("truetype");
+}
+
+
+
+p{
+font-family: "kongtext";
+color: aliceblue;
+}
+
+html,
+body {
+scroll-behavior: smooth;
+background-image: url(asset/plan/test/onestbien.jpg);
+background-color:rgb(39 41 58);
+background-repeat: no-repeat;
+background-size: 100%;
+overflow: hidden;
+font-family: "kongtext";
+color: aliceblue;
+}
+
+.enTete {
+    display: flex;
+}
+
+.bouton-interaction {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-inline-start: 361px;
+    width: auto;
+    align-items: flex-end;
+    position: fixed;
+
+    bottom: 0;
+}
+
+.tamagochi img {
+    display: flex;
+    width: 111px;
+    height: auto;
+    padding: 40px;
+    align-items: flex-end;
+}
+
+.petitlogo {
+display: flex;
+height: auto;
+padding-top: 10px;
+}
+
+
+
+
+.Pourcentage {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 4px;
+padding-left: 20px;
+padding-top: 15px;
+}
+
+.creature {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+        left: 50%;
+        right: 50%;
+bottom: 150px;
+    }
+
+
+.DEUXThebe {
+position: relative;
+    animation: levitation 2s infinite;
+}
+
+@keyframes levitation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.roiDemon {
+    position: fixed;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -100;
+}
+
+.LaTete {
+    position: relative;
+        animation: Pour La tête;
+    }
+    
+    @keyframes levitation {
+        0% {
+            transform: translateY(0);
+        }
+    
+        50% {
+            transform: translateY(-20px);
+        }
+    
+        100% {
+            transform: translateY(0);
+        }
+
+}
+
+.leSon { 
+height: 50px;
+display: flex;
+float: right;
+margin-top: -120px;
+
+}
+
+.lesNuages{
+    display: flex;
+    align-items: center;
+}
+
+.nuageD {
+    margin-left: 750px;
+animation: bougerDroiteGauche 15s ease-in-out infinite;
+}
+
+@keyframes bougerDroiteGauche {
+    0% {
+        transform: translateX(50px);
+    }
+
+    50% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+
+.nuageG {                                       
+    margin-left: -150px;
+    animation: bougerGaucheDroite 15s ease-in-out infinite;
+}
+
+@keyframes bougerGaucheDroite {
+    0% {
+        transform: translateX(-50px);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
+
+
+
+

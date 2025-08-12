@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="./asset/logo%/logo.png" />
+    <!-- c'est pour faire en sorte que ton logo apparait dans ta fenêtre web c'est la petite cerise -->
+    <link rel="stylesheet" href="thebe.css" />
+    <title>THEBE</title>
+  </head>
+
+  <body>
+    <div class="enTete">
+      <!-- Logo -->
+      <div class="Logo" id="LesLogos">
+        <div class="petitlogo" id="ame">
+          <img src="asset/logo%/ame.png" />
+        </div>
+
+        <div class="petitlogo" id="Rune">
+          <img src="asset/logo%/tenebre.png" />
+        </div>
+
+        <div class="petitlogo" id="someil">
+          <img src="asset/logo%/dodo.png" />
+        </div>
+      </div>
+      <!-- Fin logo -->
+
+      <!-- Pourcentage -->
+      <div class="Pourcentage" id="%">
+        <!-- ame -->
+        <div class="PourcentageTenebre">
+          <div class="PourcentageS"><span id="pourcentage-soul">25</span>%</div>
+        </div>
+
+        <!-- tenebre -->
+
+        <div class="PourcentageTenebre">
+          <div class="PourcentageT">
+            <span id="pourcentage-tenebre">25</span>%
+          </div>
+        </div>
+
+        <!-- repos -->
+        <div class="PourcentageTenebre">
+          <div class="PourcentageD">
+            <span id="pourcentage-sleep">100</span> %
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN Pourcentage -->
+
+    <!--  icone musique mais si tu as pas de musique de fond ossef -->
+    <!-- parceque enfaite lorsque tu veut mettre de la musique de fond tu est dans l'obligation d'avoir un luncher tu peux pas juste avoir de la musique qui se lance automatiquement -->
+    <div class="leSon">
+      <audio id="myAudio" loop autoplay>
+        <source src="sound/oh ça fait peur.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div onclick="togglePlayPause()">
+        <img
+          src="asset/bouton/musique/le bon2.png "
+          alt=""
+          onclick="changerImage5(this)"
+        />
+      </div>
+
+      <script>
+        var audio = document.getElementById("myAudio");
+        audio.volume = 0.1;
+
+        function togglePlayPause() {
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+          }
+        }
+      </script>
+    </div>
+
+    <div class="creature">
+      <div class="UNthebe">
+        <img id="character" src="asset/thebePersonnage/1erÉtape/Enfant.svg" />
+      </div>
+    </div>
+    <!--  fin icone musique -->
+
+    <!-- nuages -->
+    <div class="lesNuages">
+      <div class="nuageG">
+        <img src="asset/plan/test/nuageG.png" />
+      </div>
+
+      <div class="nuageD">
+        <img src="asset/plan/test/nuageD 1.png" />
+      </div>
+    </div>
+
+    <!-- fin nuages -->
+
+    <!-- Bouton interractif là les ecriture en jaune c'est pour le son des boutons si tu veux pas en mettre faut pas mettre là où y'a écrit script -->
+    <div class="bouton-interaction" id="boutons">
+      <audio id="son" src="sound/effetMiam.mp3">
+        <script>
+          var lesonb = document.getElementById("son");
+          lesonb.volume = 0.05;
+
+          function togglePlayPause() {
+            if (audio.paused) {
+              audio.play();
+            } else {
+              audio.pause();
+            }
+          }
+        </script>
+      </audio>
+
+      <!-- ame -->
+      <div class="tamagochi" id="miaam">
+        <div id="Miam-bouton">
+          <img
+            src="asset/bouton/faim/miam_passif.png"
+            alt=""
+            onclick="changerImage(this)"
+          />
+          <!-- super important "changerImage" laisse le même nom, parreil pour "changerImage2" etc, en js c'est trop important c'est pas un nom random c'est une fonction  -->
+        </div>
+        <div id="pourcentageSoul"></div>
+        <div id="ToujourPlus"></div>
+      </div>
+
+      <!-- tenebre -->
+      <div class="tamagochi" id="tenebre">
+        <div id="thenebreBouton">
+          <img
+            src="asset/bouton/tenebre/tenebre_passif.png"
+            alt=""
+            onclick="changerImage2(this)"
+          />
+        </div>
+        <div id="percentage"></div>
+        <div id="EncorePlus"></div>
+      </div>
+      <!-- AU DODO -->
+      <div class="tamagochi" id="dodo">
+        <div id="dodoBouton">
+          <img
+            src="asset/bouton/dodo/dodo_normal.png"
+            alt=""
+            onclick="changerImage3(this)"
+          />
+        </div>
+        <div id="percentageD"></div>
+        <div id="EncoreplusD"></div>
+      </div>
+      <!-- Recommencer -->
+      <div class="tamagochi" id="encore">
+        <div class="restartButton"></div>
+        <img
+          src="asset/bouton/encore/encore_passif.png"
+          alt=""
+          onclick="reloadPage()"
+        />
+        <!-- vu que j'arrivais pas à lier la fonction de faire une nouvelle partie quand tu appuye sur un boutons j'ai fait en sorte que la page ce reload lorsque tu appuye sur un bouton même si maintenant que j'y pense tu peux juste appuyer sur rafraichire la page mais bon... c'est fait -->
+        <div id="Repartie"></div>
+      </div>
+
+      <script>
+        function reloadPage() {
+          window.location.reload();
+        }
+      </script>
+    </div>
+    <!-- FIN Bouton interractif -->
+
+    <script src="js.js"></script>
+  </body>
+</html>
